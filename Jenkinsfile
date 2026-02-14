@@ -5,7 +5,13 @@ pipeline {
         registry = "bhuvanabaskaran/democicd" 
         registryCredential = 'dockerhub' 
    }
-
+  stage('Debug User') {
+	    steps {
+	        sh 'whoami'
+	        sh 'id'
+			sh 'exit 0
+	    }
+	}
   stages {
     stage('Checkout') {
       steps {
@@ -90,6 +96,7 @@ pipeline {
   }
 
 }
+
 
 
 
