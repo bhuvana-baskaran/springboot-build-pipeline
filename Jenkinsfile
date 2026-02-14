@@ -5,14 +5,14 @@ pipeline {
         registry = "bhuvanabaskaran/democicd" 
         registryCredential = 'dockerhub' 
    }
-  stage('Debug User') {
+  stages {
+	stage('Debug User') {
 	    steps {
 	        sh 'whoami'
 	        sh 'id'
 			sh 'exit 0
 	    }
 	}
-  stages {
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/bhuvana-baskaran/springboot-build-pipeline.git'
@@ -96,6 +96,7 @@ pipeline {
   }
 
 }
+
 
 
 
