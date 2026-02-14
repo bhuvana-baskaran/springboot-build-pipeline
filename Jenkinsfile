@@ -10,7 +10,7 @@ pipeline {
 	    steps {
 	        sh 'whoami'
 	        sh 'id'
-			sh 'exit 0
+			sh 'exit 0'
 	    }
 	}
     stage('Checkout') {
@@ -96,6 +96,7 @@ pipeline {
   }
 
 }
+
 
 
 
